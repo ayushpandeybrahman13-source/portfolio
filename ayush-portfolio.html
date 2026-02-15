@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush Pandey | Professional Portfolio</title>
+
+<style>
+
+/* ===== GLOBAL STYLE ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(to right,#0f2027,#203a43,#2c5364);
+    color:white;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* ===== NAVBAR ===== */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,0.4);
+    position:fixed;
+    width:100%;
+    top:0;
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#00f7ff;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#00f7ff;
+}
+
+/* ===== SECTIONS ===== */
+section{
+    padding:120px 10%;
+    text-align:center;
+}
+
+/* ===== HOME ===== */
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+}
+
+.home-content{
+    max-width:50%;
+}
+
+.home-content h1{
+    font-size:40px;
+}
+
+.home-content span{
+    color:#00f7ff;
+}
+
+.home-content p{
+    margin-top:15px;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 25px;
+    background:#00f7ff;
+    color:black;
+    border-radius:25px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:white;
+}
+
+.home img{
+    width:280px;
+    border-radius:50%;
+    border:5px solid #00f7ff;
+    box-shadow:0 0 30px #00f7ff;
+}
+
+/* ===== SKILLS ===== */
+.skills-container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.skill{
+    background:rgba(255,255,255,0.1);
+    padding:15px 25px;
+    border-radius:20px;
+    border:1px solid #00f7ff;
+    transition:0.3s;
+}
+
+.skill:hover{
+    transform:scale(1.1);
+}
+
+/* ===== CONTACT ===== */
+form{
+    max-width:500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+form input, form textarea{
+    margin:10px 0;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+}
+
+form button{
+    border:none;
+    cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:black;
+    padding:20px;
+    text-align:center;
+}
+
+@media(max-width:900px){
+    .home{
+        flex-direction:column;
+    }
+    .home-content{
+        max-width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Ayush Pandey</div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="home">
+    <div class="home-content">
+        <h1>Hello, I'm <span>Ayush Pandey</span></h1>
+        <h2>Front-End Developer</h2>
+        <p>
+            I am a passionate BCA student and professional web developer skilled in HTML, CSS, C++ and Java.
+            I create modern, responsive and user-focused websites with clean design and strong coding logic.
+        </p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+
+    <img src="profile.jpg" alt="Ayush Pandey">
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a dedicated and ambitious developer who believes in continuous learning.
+        My technical expertise includes HTML, CSS, C++ and Java. I aim to work in a reputed IT company
+        where I can contribute to real-world projects and enhance my professional skills.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">C++</div>
+        <div class="skill">Java</div>
+    </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume">
+    <h2>Resume</h2>
+    <p><strong>Name:</strong> Ayush Pandey</p>
+    <p><strong>Qualification:</strong> BCA Student</p>
+    <p><strong>Skills:</strong> HTML, CSS, C++, Java</p>
+    <p><strong>Career Objective:</strong> To become a successful Software Engineer and build innovative digital solutions.</p>
+    <a href="#" class="btn">Download Resume</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Send Message</h2>
+    <form onsubmit="return sendMessage()">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 Ayush Pandey | All Rights Reserved
+</footer>
+
+<script>
+function sendMessage(){
+    alert("Message sent successfully! (Demo Mode)");
+    return false;
+}
+</script>
+
+</body>
+</html>
